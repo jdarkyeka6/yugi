@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#09090b" />
+  <meta name="description" content="YUGI.LOL — press the button, get a random internet experience." />
+  <title>YUGI.LOL — The Internet Button</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="topbar">
+    <a href="#" class="brand" id="brand">YUGI<span>.LOL</span></a>
+    <div class="top-actions">
+      <button class="ghost" id="achievementsBtn">🏆 <span id="achievementCount">0</span></button>
+      <button class="ghost" id="statsBtn">STATS</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="screen active home-screen">
+      <div class="eyebrow">THE INTERNET BUTTON</div>
+      <h1>The internet has<br><span>selected your fate.</span></h1>
+      <p class="lede">One button. A pile of tiny games, strange challenges, cursed widgets and things that probably did not need to exist.</p>
+      <button id="chaosButton" class="chaos-button">
+        <span class="button-glow"></span>
+        <span class="button-copy">GIVE ME SOMETHING</span>
+      </button>
+      <p class="tiny">No account. No algorithm. Just chaos.</p>
+    </section>
+
+    <section id="experience" class="screen experience-screen">
+      <div class="experience-meta">
+        <span id="rarity" class="rarity">COMMON</span>
+        <span id="thingNumber" class="thing-number">THING #001</span>
+      </div>
+      <div id="experienceContent" class="experience-content"></div>
+      <button id="nextButton" class="next-button">NEXT RANDOM THING →</button>
+    </section>
+  </main>
+
+  <div id="modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
